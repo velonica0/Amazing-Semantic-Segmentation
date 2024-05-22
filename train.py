@@ -30,9 +30,9 @@ def str2bool(v):
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--model', help='Choose the semantic segmentation methods.', type=str, required=True)
-parser.add_argument('--base_model', help='Choose the backbone model.', type=str, default=None)
-parser.add_argument('--dataset', help='The path of the dataset.', type=str, default='CamVid')
+parser.add_argument('--model', help='Choose the semantic segmentation methods.', type=str, default="DeepLabV3Plus")
+parser.add_argument('--base_model', help='Choose the backbone model.', type=str, default="MobileNetV2")
+parser.add_argument('--dataset', help='The path of the dataset.', type=str, default='C:\\GitHub\\Amazing-Semantic-Segmentation\\VOC2012\\VOCSegment')
 parser.add_argument('--loss', help='The loss function for traing.', type=str, default=None,
                     choices=['ce', 'focal_loss', 'miou_loss', 'self_balanced_focal_loss'])
 parser.add_argument('--num_classes', help='The number of classes to be segmented.', type=int, default=32)
